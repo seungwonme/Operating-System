@@ -1,0 +1,8 @@
+// pass 값이 최소인 클라이언트로 선택
+current = remove_min(queue);
+// 자원을 타임 퀀텀만큼 선택된 프로세스에게 할당
+schedule(current);
+// 다음 pass 값을 보폭 값을 이용하여 갱신
+current->pass += current->stride;
+// 다시 큐에 저장한다
+insert(queue, current);
